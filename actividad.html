@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad LocalStorage</title>
+</head>
+<body>
+    <!--
+    1. PIDE AL USUARIO QUE INGRESE SU NOMBRE MEDIANTE UN PROMPT
+    2. GUARDAR EL NOMBRE INGRESADO EN LS
+    3. MUESTRA EL NOMBRE INGRESADO
+    -->
+    <!--
+    <script>
+        let nombre = prompt('Ingresa tu nombre: ');
+        localStorage.setItem("nombre", nombre);
+        console.log('el nombre almacenado es: '+localStorage.getItem("nombre"));
+    </script>
+
+    
+        1. pedir los datos con el prompt y Guardar el siguiente objeto el LS
+        cedula: 13453
+        nombre: pedro
+        apellido: ruiz
+
+        2. despues de almacenarlo, mostrar en la consola la cédula y el nombre
+    -->
+      <!--  <script>
+            let datosPersonales = {
+                nombre:"",
+                cedula:"",
+                apellido:""
+            };
+
+            datosPersonales.nombre = prompt('Ingresa tu nombre: ');
+            datosPersonales.cedula = prompt('Ingresa tu cédula: ');
+            datosPersonales.apellido = prompt('Ingresa tu apellido: ')
+
+            localStorage.setItem("datos", JSON.stringify(datosPersonales));
+
+            let datos1 = JSON.parse(localStorage.getItem("datos"));
+            console.log('los datos son:' +datos1.cedula, datos1.nombre);
+            console.log('los datos son:',datos1);         
+        </script>
+        <h2>Eliminar valores del LocalStorage</h2>
+        <p>
+            se usa método removeItem('') y recibe la clave del elemento que deseamos eliminar: 
+            LocalStorage.removeItem('clave').
+        </p>
+        <script>
+            //ejemplo:
+            localStorage.removeItem('persona1');
+            // Investigar: sessionStorage
+        </script>
+
+        <h2>Limpiar todo el LocalStorage</h2>
+        <p>
+            Para limpiar todo lo que existe en el almacenamiento, se hace usando el método: localStorage.clear();
+        </p> -->
+        <h1>Manipulación de datos con LocalStorage y DOM</h1>
+        <form>
+            <label>Nombre: </label> <br> 
+            <input type="text" id="nombre"> <br> <br>
+            <label>Apellidos: </label> <br>
+            <input type="text" id="apellidos"> <br> <br>
+            <button type="button" value="Guardar datos" style="cursor: pointer;" id="botonGuardar">Guardar</button>
+        </form> 
+        <hr>
+        <button type="button" id="botonMostrar">Mostrar datos</button>
+        <p>Tu nombre es: </p> <p id="mostrarNombre"></p>
+        <p>y tu apellido: </p> <p id="mostrarApellidos"></p>
+
+        <script src="/guardarDatos.js"></script>
+</body>
+</html>
